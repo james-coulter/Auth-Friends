@@ -8,8 +8,10 @@ const NewFriend = () => {
         email: '',
     })
 
+    const [loading, setLoading] = useState(false)
+
     const handleChange = e => {
-        e.preventDefault();
+
         setMoreFriends({
             ...moreFriends,
             [e.target.name]: e.target.value
@@ -17,8 +19,10 @@ const NewFriend = () => {
     }
 
     const handleSubmit = e => {
-        e.preventDefault();
+
+        setLoading(true)
         axiosWithAuth().post('/api/friends', moreFriends)
+                       .then(() => setLoading(false)) 
                        .then(res => {
                            console.log('Post Response Success', res)
                            setMoreFriends({name: '', age: '', email: ''})
@@ -51,8 +55,8 @@ const NewFriend = () => {
             placeholder='Email'
             onChange={handleChange}
             value={moreFriends.email}/>
-
-            <button type='submit'>Add Friend</button>
+            {loading === false ? (
+            <button type='submit'>Add Friend</button>) : <h3>loading</h3>}
         </form>
     )
 }
