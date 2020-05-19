@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import './Login.css';
 
 class Login extends React.Component {
   state = {
@@ -37,8 +38,9 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div>
-          <h2>Login: lambda, Password: 123</h2>
+      <div className='login'>
+          <h3 className='loginName'>Login</h3>
+          {/* <h2>Login: lambda, Password: 123</h2> */}
         <form onSubmit={this.Login}>
           <input
             type="text"

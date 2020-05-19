@@ -9,9 +9,13 @@ import './App.css';
 function App() {
   return (
     <Router>
+      <div className='nav'>
+      <Link className='nav' to='/Login'>Login</Link>
+      </div>
       <div className='App'>
-        <Link to='/Login'>Login</Link>
-        <Link to='/protected'>Protected Page</Link>
+        <h1 className='title'>Welcome to</h1>
+        <h1 className='title friend'>FriendBook</h1>
+        {/* <Link to='/protected'>Protected Page</Link> */}
         <Switch>
           <PrivateRoute exact path='/protected' component={FriendsList} />
           {/* <PrivateRoute path='/NewFriends' component={NewFriend} /> */}

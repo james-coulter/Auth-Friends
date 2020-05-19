@@ -1,5 +1,14 @@
+html, body {
+  background: url('./friends.jpg');
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 .App {
-  text-align: center;
+  text-align: left;
+  margin-top: 5%;
 }
 
 .App-logo {
@@ -35,4 +44,32 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.nav {
+  text-decoration: none;
+  color: orange;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  margin-left: 60%;
+}
+
+.title {
+  font-size: 4rem;
+  color: #191414;
+  margin: 0;
+  text-align: left;
+  margin-left: 1%;
+}
+
+.friend {
+  color: orange;
+}
+
+.login {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }

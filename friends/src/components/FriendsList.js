@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { axiosWithAuth } from '..//axiosWithAuth';
 import FriendCard from './FriendCard';
 import NewFriend from './NewFriend';
+import './Login.css';
 
 const FriendsList = props => {
     const [friends, setFriends] = useState([]);
@@ -15,7 +16,7 @@ const FriendsList = props => {
     }, [])
 
     return (
-        <div>
+        <div className='friendsList'>
             <NewFriend />
             <FriendCard key={friends.id} friends={friends} />
         </div>
