@@ -5,7 +5,7 @@ const FriendCard = props => {
         <div>
             {props.friends.map( friend => {
                 return (
-                    <div>
+                    <div className='friendCard'>
                         <h1>{friend.name}</h1>
                         <h2>{friend.age}</h2>
                         <h2>{friend.email}</h2>

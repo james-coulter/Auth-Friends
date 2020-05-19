@@ -18,7 +18,7 @@ const FriendsList = props => {
     return (
         <div className='friendsList'>
             <NewFriend />
-            <FriendCard key={friends.id} friends={friends} />
+            <FriendCard className='friendCardParent' key={friends.id} friends={friends} />
         </div>
     )
 }

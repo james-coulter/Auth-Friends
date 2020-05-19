@@ -26,7 +26,8 @@ const NewFriend = () => {
     }
 
     return(
-        <form onSubmit={handleSubmit}>
+        <form className='friendForm' onSubmit={handleSubmit}>
+            <h2>Add a new friend here.</h2>
             <input 
             type="text"
             required
